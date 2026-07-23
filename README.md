@@ -66,49 +66,6 @@ The Azure virtual machine hosts several services:
 - [07 – WireGuard VPN Configuration](07-WireGuard.md)
 - [08 – Backup Script](08-Backup-Script.md)
 
-### 2. DNS Configuration
-
-Configuration of the custom domain and verification that it resolves to the Azure virtual machine's public IP address.
-
-[View DNS Configuration](02-DNS-Configuration.md)
-
-### 3. SSL and HTTPS Configuration
-
-Installation of Certbot, configuration of the Let's Encrypt SSL certificate, and automatic HTTP-to-HTTPS redirection.
-
-[View SSL Configuration](03-SSL-Configuration.md)
-
-### 4. WordPress Installation
-
-Manual installation and configuration of WordPress, PHP, MySQL, and the Nginx virtual host.
-
-[View WordPress Installation](04-WordPress-Installation.md)
-
-### 5. WordPress Website Development
-
-Design and customisation of the Elevate Fitness Studio website, including pages, navigation, branding, content, and final deployment verification.
-
-[View WordPress Website Development](05-WordPress-Website-Development.md)
-
-### 6. MediaWiki Installation
-
-Installation and configuration of MediaWiki as a staff knowledge base on the same Azure virtual machine.
-
-[View MediaWiki Installation](06-MediaWiki.md)
-
-### 7. WireGuard VPN Configuration
-
-Installation and configuration of WireGuard, Azure UDP access, client connectivity, routing, and VPN handshake testing.
-
-[View WireGuard VPN Configuration](07-WireGuard.md)
-
-### 8. Backup Script
-
-Creation of an automated backup solution for website files, databases, and important server configuration files.
-
-[View Backup Script](08-Backup-Script.md)
-
----
 
 ## Repository Structure
 
