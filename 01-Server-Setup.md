@@ -1,8 +1,10 @@
 # Azure Server Setup
 
-## Create the Virtual Machine
+## Step 1 — Get a Cloud VM
 
-An Ubuntu 24.04 LTS virtual machine was created in Microsoft Azure using the Standard B1s size.
+I used an Ubuntu 24.04 LTS virtual machine built in Microsoft Azure using the Standard B1S size.
+
+  You can also use: AWS or DigitalOcean
 
 ### Figure 1 - Azure Virtual Machine Overview
 
@@ -10,35 +12,49 @@ An Ubuntu 24.04 LTS virtual machine was created in Microsoft Azure using the Sta
 
 ---
 
-## Verify the Virtual Machine Properties
+## Step 2 - Verify the Virtual Machine Properties
 
 The VM properties confirm the operating system, networking configuration, and public IP address.
+
+Create:
+
+Ubuntu VM
+Open ports:
+22 (SSH)
+80 (HTTP)
+443 (HTTPS)
 
 ### Figure 2 - Azure Virtual Machine Properties
 
 ![Azure VM Properties](images/azure-vm-properties.png)
 
 ---
+## Step 3 - Download the New Key pair 
 
-## Connect to the Server
+After the VM configuration is complete, your .pem file will be generated. It is a private key Azure made for you. Store it somewhere safe on your device and remember the path so it is accessible. 
+
+### Figure 3 - SSH Connection into the VM
+
+![Generate new key Pair](images/generatetKeypair.png)
+
+## Step 4 - Finally Connect to the Server
+
+In terminal-
 
 ```bash
-ssh azureuser@20.46.48.69
+chmod 600 ~/YOUR_PATH/key.pem
 ```
 
-### Figure 3 - SSH Connection
+```bash
+ssh -i key.pem azureuser@YOUR_PUBLIC_IP
+```
+
+### Figure 4 - SSH Connection into the VM
+
+
 
 ![SSH Login](images/ssh-login.png)
 
----
 
-## Update Ubuntu
 
-```bash
-sudo apt update
-sudo apt upgrade -y
-```
 
-### Figure 4 - Ubuntu Update
-
-![Ubuntu Update](images/ubuntu-update.png)
