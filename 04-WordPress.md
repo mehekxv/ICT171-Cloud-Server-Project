@@ -126,6 +126,7 @@ The website is:
 
 This deployment provides the public-facing website for Elevate Fitness Studio and forms a core component of the cloud server solution developed for the ICT171 Cloud Server Project.
 
+
 ---
 
 ## Next Step
