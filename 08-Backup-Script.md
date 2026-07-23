@@ -32,6 +32,79 @@ Once completed, the script confirms that the backup has been successfully create
 
 ---
 
+## Backup Script Code
+
+The script was created using Bash and automates the backup of the WordPress files, WordPress database and MediaWiki database.
+
+```bash
+#!/bin/bash
+
+DATE=$(date +"%Y-%m-%d_%H-%M-%S")
+BACKUP_DIR="$HOME/backups/$DATE"
+ARCHIVE="$HOME/backups/elevate-fitness-backup-$DATE.tar.gz"
+
+mkdir -p "$BACKUP_DIR"
+
+echo "Backing up WordPress files..."
+sudo tar -czf "$BACKUP_DIR/wordpress-files.tar.gz" /var/www/html
+
+echo "Backing up WordPress database..."
+mysqldump \
+  --user=wpuser \
+  --password="REDACTED" \
+  --no-tablespaces \
+  wordpress > "$BACKUP_DIR/wordpress-database.sql"
+
+echo "Backing up MediaWiki database..."
+mysqldump \
+  --user=mehekx \
+  --password="REDACTED" \
+  --no-tablespaces \
+  mediawiki_db > "$BACKUP_DIR/mediawiki-database.sql"
+
+echo "Compressing the backup..."
+tar -czf "$ARCHIVE" -C "$HOME/backups" "$DATE"
+
+echo "Backup successfully created:"
+echo "$ARCHIVE"
+```
+
+## Script Explanation
+
+- `date` creates a unique timestamp for every backup.
+- `mkdir -p` creates the backup directory.
+- `tar` compresses the WordPress files and final backup directory.
+- `mysqldump` exports the WordPress and MediaWiki databases.
+- `--no-tablespaces` prevents database privilege errors.
+- Output redirection (`>`) saves each database export as an SQL file.
+- The final archive combines all backup files into one compressed file.
+
+## Creating and Running the Script
+
+The script was created using:
+
+```bash
+nano ~/backup.sh
+```
+
+Execution permission was then added:
+
+```bash
+chmod +x ~/backup.sh
+```
+
+The script was executed using:
+
+```bash
+~/backup.sh
+```
+
+The generated backup archives can be checked using:
+
+```bash
+ls -lh ~/backups
+```
+
 ## Screenshots
 
 ### Screenshot 1 – Backup Script
