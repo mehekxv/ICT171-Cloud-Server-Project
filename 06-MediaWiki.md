@@ -88,6 +88,53 @@ The verification confirmed that:
 
 ---
 
+## Step 6 - MediaWiki Configuration
+
+MediaWiki was successfully configured as an internal knowledge base for Elevate Fitness Studio. The wiki was customised with the organisation name and a main page containing links to staff documentation and operational procedures.
+
+The main page provides quick access to common resources including:
+
+- Staff Onboarding
+- Gym Opening Procedures
+- Gym Closing Procedures
+- Membership Enquiries
+- Class Booking Process
+- Customer Complaint Handling
+- Equipment Maintenance
+- Emergency Procedures
+
+### Commands Used
+
+```bash
+sudo nano /var/www/html/mediawiki/LocalSettings.php
+
+php /var/www/html/mediawiki/maintenance/run.php edit "Main Page"
+```
+
+### Screenshot
+
+![MediaWiki Main Page](images/mediawiki-main-page.png)
+## Step 7 - Website Integration
+
+The MediaWiki knowledge base was integrated with the main WordPress website by adding a **Staff Resources** link in the website footer. This allows staff to quickly access the internal documentation from the main website.
+
+### Commands Used
+
+```bash
+wp post list --post_type=wp_navigation
+
+wp post update <navigation-id> --post_content='<updated navigation content with Staff Resources link>'
+```
+
+The **Staff Resources** link points to:
+
+```text
+https://mehekx.com/mediawiki
+```
+### Screenshot
+
+![Staff Resources Link](images/staffRecources.png)
+
 ## Outcome
 
 MediaWiki was successfully deployed on the Azure Ubuntu virtual machine as a web-based knowledge management system.
@@ -101,6 +148,8 @@ The Staff Knowledge Base is:
 - Available at `/mediawiki`
 
 This provides Elevate Fitness Studio with a central location for staff documentation and internal knowledge sharing.
+
+
 
 ---
 
