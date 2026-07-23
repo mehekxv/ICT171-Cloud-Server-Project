@@ -40,13 +40,13 @@ https://mehekx.com/
 
 ## Documentation
 
-- [Server Setup](01-Server-Setup.md)
-- [WordPress Installation](02-WordPress.md)
-- [MediaWiki Installation](03-MediaWiki.md)
-- [WireGuard Configuration](04-WireGuard.md)
-- [DNS Configuration](05-DNS.md)
-- [SSL Configuration](06-SSL.md)
-- [Backup Script](07-Backup-Script.md)
+01-Server-Setup.md
+02-DNS-Configuration.md
+03-SSL-Configuration.md
+04-WordPress.md
+05-MediaWiki.md
+06-WireGuard.md
+07-Backup-Script.md
 
 ## Video Explainer
 
