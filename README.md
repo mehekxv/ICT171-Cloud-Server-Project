@@ -1,69 +1,194 @@
 # ICT171 Cloud Server Project
 
-**Student:** Mehek Mohammed Ashraf  
-**Student ID:** 35419399
-
 ## Project Overview
 
-This project demonstrates the deployment and administration of a cloud-based Ubuntu 24.04 LTS server hosted on Microsoft Azure using the Infrastructure as a Service (IaaS) model.
+This repository documents the design, deployment, configuration, and testing of a cloud server hosted on Microsoft Azure.
 
-The server was configured with:
+The project was completed using an Infrastructure as a Service (IaaS) model. An Ubuntu virtual machine was created and manually configured to host a public WordPress website, a MediaWiki knowledge base, a WireGuard VPN service, and an automated backup solution.
 
-- Nginx web server
-- Custom DNS domain
-- HTTPS encryption using Let’s Encrypt
-- WordPress website
-- MediaWiki knowledge base
-- WireGuard VPN
-- Automated backup script
+The project website represents a fictional business called **Elevate Fitness Studio**.
 
-## Server Information
+---
 
-| Item | Value |
+## Live Services
+
+| Service | Address |
 |---|---|
-| Cloud platform | Microsoft Azure |
-| Operating system | Ubuntu Server 24.04 LTS |
-| VM size | Standard B1s |
-| Web server | Nginx |
-| Public IP | `20.46.48.69` |
+| WordPress Website | [https://mehekx.com](https://mehekx.com) |
+| MediaWiki Knowledge Base | [https://mehekx.com/mediawiki](https://mehekx.com/mediawiki) |
+| Server Public IP | `20.46.48.69` |
+| WireGuard VPN Port | `51820/UDP` |
+
+---
+
+## Cloud Environment
+
+| Component | Configuration |
+|---|---|
+| Cloud Provider | Microsoft Azure |
+| Deployment Model | Infrastructure as a Service |
+| Operating System | Ubuntu Server 24.04 LTS |
+| Virtual Machine Size | Standard B1s |
+| Web Server | Nginx |
 | Domain | `mehekx.com` |
-| Website | `https://mehekx.com/` |
-| MediaWiki | `https://mehekx.com/mediawiki/` |
+| SSL Certificate | Let's Encrypt |
+| SSL Management | Certbot |
+| Database | MySQL Community Server 8 |
+| PHP Version | PHP 8.3 |
+| Content Management System | WordPress |
+| Knowledge Base | MediaWiki |
+| VPN Service | WireGuard |
 
-## Deployment Order
+---
 
-The server was built in the following order:
+## Project Architecture
 
-1. Created the Azure virtual machine
-2. Connected to the VM through SSH
-3. Updated Ubuntu
-4. Installed and tested Nginx
-5. Configured the custom domain and DNS record
-6. Installed Certbot and enabled HTTPS
-7. Installed WordPress
-8. Installed MediaWiki
-9. Configured WireGuard VPN
-10. Created the automated backup script
+The Azure virtual machine hosts several services:
+
+- **Nginx** serves the WordPress and MediaWiki web applications.
+- **WordPress** provides the public Elevate Fitness Studio website.
+- **MediaWiki** provides a staff knowledge base.
+- **MySQL** stores the WordPress and MediaWiki databases.
+- **Let's Encrypt and Certbot** provide HTTPS encryption.
+- **WireGuard** provides secure remote VPN access.
+- **Automated backup scripts** protect website files, databases, and server configurations.
+
+---
 
 ## Documentation
 
-1. [Azure Server Setup](01-Server-Setup.md)
-2. [DNS Configuration](02-DNS-Configuration.md)
-3. [SSL and HTTPS Configuration](03-SSL-Configuration.md)
-4. [WordPress Installation](04-WordPress.md)
-5. [MediaWiki Installation](05-MediaWiki.md)
-6. [WireGuard VPN Configuration](06-WireGuard.md)
-7. [Automated Backup Script](07-Backup-Script.md)
+The project documentation follows the order in which the cloud environment was deployed and configured.
 
-## Security Notes
+### 1. Server Setup
 
-Sensitive information has not been uploaded to this repository. Private SSH keys, WireGuard private keys, database passwords and client configuration files must remain confidential.
+Creation and configuration of the Azure Ubuntu virtual machine, including SSH access, system updates, and Nginx installation.
 
-## Video Explainer
+[View Server Setup](01-Server-Setup.md)
 
-The project video link will be added after recording.
+### 2. DNS Configuration
 
+Configuration of the custom domain and verification that it resolves to the Azure virtual machine's public IP address.
 
-## Video Explainer
+[View DNS Configuration](02-DNS-Configuration.md)
 
-Video link will be added after recording.
+### 3. SSL and HTTPS Configuration
+
+Installation of Certbot, configuration of the Let's Encrypt SSL certificate, and automatic HTTP-to-HTTPS redirection.
+
+[View SSL Configuration](03-SSL-Configuration.md)
+
+### 4. WordPress Installation
+
+Manual installation and configuration of WordPress, PHP, MySQL, and the Nginx virtual host.
+
+[View WordPress Installation](04-WordPress-Installation.md)
+
+### 5. WordPress Website Development
+
+Design and customisation of the Elevate Fitness Studio website, including pages, navigation, branding, content, and final deployment verification.
+
+[View WordPress Website Development](05-WordPress-Website-Development.md)
+
+### 6. MediaWiki Installation
+
+Installation and configuration of MediaWiki as a staff knowledge base on the same Azure virtual machine.
+
+[View MediaWiki Installation](06-MediaWiki.md)
+
+### 7. WireGuard VPN Configuration
+
+Installation and configuration of WireGuard, Azure UDP access, client connectivity, routing, and VPN handshake testing.
+
+[View WireGuard VPN Configuration](07-WireGuard.md)
+
+### 8. Backup Script
+
+Creation of an automated backup solution for website files, databases, and important server configuration files.
+
+[View Backup Script](08-Backup-Script.md)
+
+---
+
+## Repository Structure
+
+```text
+ICT171-Cloud-Server-Project/
+│
+├── README.md
+├── 01-Server-Setup.md
+├── 02-DNS-Configuration.md
+├── 03-SSL-Configuration.md
+├── 04-WordPress-Installation.md
+├── 05-WordPress-Website-Development.md
+├── 06-MediaWiki.md
+├── 07-WireGuard.md
+├── 08-Backup-Script.md
+│
+└── images/
+    ├── Server setup screenshots
+    ├── DNS screenshots
+    ├── SSL screenshots
+    ├── WordPress screenshots
+    ├── MediaWiki screenshots
+    ├── WireGuard screenshots
+    └── Backup screenshots
+```
+
+---
+
+## Security Features
+
+The project includes the following security controls:
+
+- SSH key authentication for remote server access
+- HTTPS encryption using a trusted Let's Encrypt certificate
+- Automatic redirection from HTTP to HTTPS
+- Azure Network Security Group firewall rules
+- WireGuard encrypted VPN access
+- Separate databases and database users for web applications
+- Restricted storage of private keys and credentials
+- Automated backups of important project data
+
+Sensitive information such as passwords, private keys, database credentials, and full VPN configuration files has not been published in this repository.
+
+---
+
+## Testing and Verification
+
+The completed environment was tested by confirming:
+
+- The Azure virtual machine was accessible through SSH.
+- The custom domain resolved to the correct public IP address.
+- The website loaded securely over HTTPS.
+- HTTP traffic redirected automatically to HTTPS.
+- WordPress connected successfully to its MySQL database.
+- MediaWiki loaded through the configured domain path.
+- WireGuard established a successful VPN handshake.
+- VPN traffic was routed through the Azure virtual machine.
+- Backup files were created successfully.
+
+---
+
+## Project Outcome
+
+The project successfully demonstrates the deployment and management of a multi-service cloud server using Microsoft Azure.
+
+The final solution includes:
+
+- A public WordPress website
+- A MediaWiki staff knowledge base
+- A secure WireGuard VPN
+- HTTPS encryption
+- Domain name configuration
+- Database-backed web applications
+- Automated backup protection
+
+The solution demonstrates practical skills in cloud computing, Linux administration, web hosting, networking, security, and service management.
+
+---
+
+## Author
+
+**ICT171 Cloud Server Project**
+
+Domain: [https://mehekx.com](https://mehekx.com)
