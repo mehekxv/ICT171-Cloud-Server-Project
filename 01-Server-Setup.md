@@ -37,7 +37,7 @@ After the VM configuration is complete, your .pem file will be generated. It is 
 
 ![Generate new key Pair](images/generatetKeypair)
 
-## Step 4 - Finally Connect to the Server
+## Step 4 - Connect to the Server
 
 In terminal-
 
@@ -53,8 +53,72 @@ ssh -i key.pem azureuser@YOUR_PUBLIC_IP
 
 
 
+
 ![SSH Login](images/ssh-login.png)
 
 
+## Step 5 — Install Nginx
 
+Nginx was installed as the web server used to deliver website content over HTTP and HTTPS.
+
+```bash
+sudo apt install nginx -y
+```
+
+After installation, the service status was checked:
+
+```bash
+sudo systemctl status nginx --no-pager
+```
+
+A successful installation should show:
+
+```text
+Active: active (running)
+```
+
+Nginx was also enabled to start automatically whenever the virtual machine restarts:
+
+```bash
+sudo systemctl enable nginx
+```
+
+### Figure 5 — Nginx Installed and Running
+
+![Figure 5 – Nginx Installed and Running](images/nginx-running.png)
+
+---
+
+## Step 6 — Test the Nginx Web Server
+
+The Nginx installation was tested by entering the Azure virtual machine's public IP address into a web browser:
+
+```text
+http://20.46.48.69
+```
+
+Anyone reproducing this setup should replace the address with their own VM public IP:
+
+```text
+http://YOUR_PUBLIC_IP
+```
+
+The default **Welcome to nginx!** page confirmed that:
+
+- Nginx was installed successfully.
+- The Nginx service was running.
+- Port `80` was accessible.
+- The Azure VM could serve web content over HTTP.
+
+### Figure 6 — Nginx Default Web Page
+
+![Figure 6 – Nginx Default Web Page](images/NginxWelcomePage.png)
+
+---
+
+## Next Step
+
+After confirming that Nginx worked through the VM's public IP address, a custom domain was purchased and configured to point to the server.
+
+Continue to: [DNS Configuration](02-DNS-Configuration.md)
 
