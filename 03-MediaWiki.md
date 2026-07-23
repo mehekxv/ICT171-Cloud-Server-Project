@@ -40,4 +40,4 @@ Configured the wiki name, database connection, and administrator account. The ge
 
 Verified that the **Staff Knowledge Base** was successfully installed and accessible through the configured HTTPS domain.
 
-![SS5 – MediaWiki Successfully Installed](images/SS5%20%E2%80%93%20MediaWiki%20Successfully%20Installed.png)
+![images/SS5 – MediaWiki Successfully Installed .png](images/SS5%20%E2%80%93%20MediaWiki%20Successfully%20Installed.png)
