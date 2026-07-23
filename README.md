@@ -57,13 +57,14 @@ The Azure virtual machine hosts several services:
 
 ## Documentation
 
-The project documentation follows the order in which the cloud environment was deployed and configured.
-
-### 1. Server Setup
-
-Creation and configuration of the Azure Ubuntu virtual machine, including SSH access, system updates, and Nginx installation.
-
-[View Server Setup](01-Server-Setup.md)
+- [01 – Server Setup](01-Server-Setup.md)
+- [02 – DNS Configuration](02-DNS-Configuration.md)
+- [03 – SSL Configuration](03-SSL-Configuration.md)
+- [04 – WordPress Installation](04-WordPress-Installation.md)
+- [05 – WordPress Website Development](05-WordPress-Website-Development.md)
+- [06 – MediaWiki Installation](06-MediaWiki.md)
+- [07 – WireGuard VPN Configuration](07-WireGuard.md)
+- [08 – Backup Script](08-Backup-Script.md)
 
 ### 2. DNS Configuration
 
