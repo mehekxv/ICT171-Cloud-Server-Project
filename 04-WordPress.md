@@ -1,19 +1,21 @@
-# 02 - WordPress Installation
+# 04 – WordPress Installation
 
 ## Overview
 
 This document describes the installation and configuration of WordPress on the Azure Ubuntu 24.04 virtual machine. The deployment follows an Infrastructure as a Service (IaaS) model, where all software components were installed and configured manually.
 
-WordPress serves as the public website for **Elevate Fitness Studio** and is hosted on the custom domain:
+WordPress serves as the public website for Elevate Fitness Studio and is hosted on the custom domain:
 
-**https://mehekx.com**
+```text
+https://mehekx.com
+```
 
 ---
 
 ## Environment
 
 | Component | Version |
-|----------|---------|
+|---|---|
 | Operating System | Ubuntu Server 24.04 LTS |
 | Web Server | Nginx |
 | PHP | PHP 8.3 |
@@ -24,7 +26,7 @@ WordPress serves as the public website for **Elevate Fitness Studio** and is hos
 
 ## Download WordPress
 
-The latest WordPress package was downloaded from the official website and extracted on the server.
+The latest stable version of WordPress was downloaded from the official WordPress website and extracted on the Ubuntu server.
 
 ```bash
 cd /tmp
@@ -32,23 +34,17 @@ wget https://wordpress.org/latest.tar.gz
 tar -xzf latest.tar.gz
 ```
 
-![Downloading and extracting WordPress](images/wordpress-files.png)
+The extracted WordPress files were prepared for deployment.
 
----
-
-## Backup Existing Website
-
-Before replacing the original website, a backup of the existing web directory was created to ensure the previous project could be restored if required.
-
-```bash
-sudo cp -r /var/www/html /var/www/html-proposal-backup
-```
+![WordPress files](images/wordpress-files.png)
 
 ---
 
 ## Configure the Database
 
-A dedicated MySQL database and database user were created for WordPress. The database credentials were then configured in the `wp-config.php` file to establish the connection between WordPress and MySQL.
+A dedicated MySQL database and database user were created for WordPress. This separated the WordPress installation from other applications hosted on the same server.
+
+The database credentials were then configured in the `wp-config.php` file to establish the connection between WordPress and MySQL.
 
 The configuration file was validated before deployment.
 
@@ -65,7 +61,7 @@ The Nginx virtual host configuration was updated to:
 - Serve the WordPress website from `/var/www/html`
 - Process PHP files using PHP-FPM
 - Support WordPress permalink routing
-- Continue using the existing Let's Encrypt SSL certificate
+- Reuse the existing Let's Encrypt SSL certificate configured during the previous HTTPS setup
 
 After the configuration was updated, Nginx was tested and reloaded.
 
@@ -80,15 +76,13 @@ sudo systemctl reload nginx
 
 The WordPress installation wizard was accessed through the custom domain.
 
-```
+```text
 https://mehekx.com
 ```
 
 The administrator account and website information were configured to complete the installation.
 
-![WordPress installation wizard](images/wordpress-install-language.png)
-
-After completing the setup, WordPress was successfully installed.
+After completing the setup, WordPress confirmed that the installation was successful.
 
 ![Successful WordPress installation](images/wordpress-install-success.png)
 
@@ -98,6 +92,13 @@ After completing the setup, WordPress was successfully installed.
 
 The deployment was verified by accessing both the WordPress administrator dashboard and the public website over HTTPS.
 
+The following checks were completed:
+
+- The public website loaded correctly over HTTPS.
+- The WordPress administrator dashboard was accessible.
+- The website successfully connected to the MySQL database.
+- The existing SSL certificate remained valid.
+
 ### WordPress Dashboard
 
 ![WordPress Dashboard](images/wordpress-dashboard.png)
@@ -106,10 +107,29 @@ The deployment was verified by accessing both the WordPress administrator dashbo
 
 ![WordPress Homepage](images/wordpress-homepage.png)
 
+### Successful Deployment
+
+![WordPress deployed successfully](images/wordpress-deployed.png)
+
 ---
 
 ## Outcome
 
-WordPress was successfully deployed on the Azure virtual machine using a manual IaaS installation. The website is fully operational, connected to a MySQL database, secured with HTTPS using a Let's Encrypt SSL certificate, and accessible through the custom domain.
+WordPress was successfully deployed on the Azure virtual machine using a manual IaaS installation.
 
-This deployment provides the public-facing website for **Elevate Fitness Studio** and forms a core component of the cloud server solution developed for the ICT171 Cloud Server Project.
+The website is:
+
+- Fully operational
+- Connected to a MySQL database
+- Secured with HTTPS using a Let's Encrypt SSL certificate
+- Accessible through the custom domain
+
+This deployment provides the public-facing website for Elevate Fitness Studio and forms a core component of the cloud server solution developed for the ICT171 Cloud Server Project.
+
+---
+
+## Next Step
+
+After the public website was successfully deployed, MediaWiki was installed as a knowledge base on the same server.
+
+Continue to: [MediaWiki Installation](05-MediaWiki.md)
