@@ -112,7 +112,7 @@ The default **Welcome to nginx!** page confirmed that:
 
 ### Figure 6 — Nginx Default Web Page
 
-![Figure 6 – Nginx Default Web Page](images/NginxWelcomePage.png)
+![Figure 6 – Nginx Default Web Page](images/NginxWelcomePage)
 
 ---
 
