@@ -13,7 +13,7 @@ sudo apt update
 sudo apt install wireguard -y
 ```
 
-![WG1 – Updating Packages and Installing WireGuard](images/WG1%20%E2%80%93%20Updating%20Packages%20and%20Installing%20WireGuard.png)
+![WG1 – Updating Packages and Installing WireGuard](WG1 – Updating Packages and Installing WireGuard)
 
 ---
 
