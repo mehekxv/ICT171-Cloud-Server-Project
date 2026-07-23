@@ -56,8 +56,20 @@ ssh -i key.pem azureuser@YOUR_PUBLIC_IP
 
 ![SSH Login](images/ssh-login.png)
 
+## Step 5 — Update Ubuntu
 
-## Step 5 — Install Nginx
+Before installing the web server, the Ubuntu package lists were refreshed and the available system updates were installed. This ensures that current package versions and security updates are applied.
+
+```bash
+sudo apt update
+sudo apt upgrade -y
+```
+
+- `sudo apt update` refreshes the list of available packages.
+- `sudo apt upgrade -y` installs the available package updates automatically.
+
+
+## Step 6 — Install Nginx
 
 Nginx was installed as the web server used to deliver website content over HTTP and HTTPS.
 
@@ -83,13 +95,13 @@ Nginx was also enabled to start automatically whenever the virtual machine resta
 sudo systemctl enable nginx
 ```
 
-### Figure 5 — Nginx Installed and Running
+### Figure 7 — Nginx Installed and Running
 
 ![Figure 5 – Nginx Installed and Running](images/nginx-running.png)
 
 ---
 
-## Step 6 — Test the Nginx Web Server
+## Step 8 — Test the Nginx Web Server
 
 The Nginx installation was tested by entering the Azure virtual machine's public IP address into a web browser:
 
