@@ -1,4 +1,4 @@
-# 04 – WordPress Installation
+# WordPress Installation
 
 ## Overview
 
