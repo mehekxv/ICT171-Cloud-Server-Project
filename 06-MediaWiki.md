@@ -104,5 +104,10 @@ This provides Elevate Fitness Studio with a central location for staff documenta
 
 ---
 
-06-MediaWiki.md
-Continue to: [WireGuard Configuration](07-WireGuard.md)
+---
+
+## Next Step
+
+After MediaWiki was successfully deployed, WireGuard was configured to provide secure VPN access to the Azure virtual machine.
+
+Continue to: [WireGuard VPN Configuration](07-WireGuard.md)
