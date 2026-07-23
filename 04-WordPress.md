@@ -133,4 +133,4 @@ This deployment provides the public-facing website for Elevate Fitness Studio an
 
 After WordPress was successfully installed, the Elevate Fitness Studio website was designed and customised using WordPress.
 
-Continue to: [WordPress Website Development](05-WordPress-Website-Development.md)
+Continue to: [WordPress Website Development](05-WordPress-Website-Development.md) **OR** you can skip to [06 - MediaWiki](06-MediaWiki.md)
