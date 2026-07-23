@@ -62,8 +62,7 @@ Sensitive information has not been uploaded to this repository. Private SSH keys
 ## Video Explainer
 
 The project video link will be added after recording.
-06-WireGuard.md
-07-Backup-Script.md
+
 
 ## Video Explainer
 
