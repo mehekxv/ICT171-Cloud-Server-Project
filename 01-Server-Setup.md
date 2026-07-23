@@ -35,7 +35,7 @@ After the VM configuration is complete, your .pem file will be generated. It is 
 
 ### Figure 3 - SSH Connection into the VM
 
-![Generate new key Pair](images/generatetKeypair.png)
+![Generate new key Pair](images/generatetKeypair)
 
 ## Step 4 - Finally Connect to the Server
 
