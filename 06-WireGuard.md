@@ -188,9 +188,9 @@ WireGuard adds a secure remote-access component to the ICT171 Cloud Server Proje
 
 ## Next Step
 
-After WireGuard was successfully configured and tested, an automated backup script was created to protect important website and configuration data.
+After the VPN was successfully configured, the Elevate Fitness Studio website was designed and customised using WordPress.
 
-Continue to: [Backup Script](07-Backup-Script.md)
+Continue to: [WordPress Website Development](07-WordPress-Website-Development.md)
 ## Security
 
 Private keys and client configuration files were not uploaded to the repository. Files such as `client.conf`, `wg0.conf`, `server_private.key`, and `client_private.key` contain sensitive information and must remain private.
