@@ -1,4 +1,4 @@
-# 05 – WordPress Website Development
+# WordPress Website Development
 
 ## Overview
 
@@ -46,34 +46,40 @@ A footer was added containing basic website information along with a link to the
 
 ### Home Page
 
-> *Insert screenshot here.*
+![Contact](images/homePage.png)
 
 ---
 
 ### About Page
 
-> *Insert screenshot here.*
+![About](images/about.png)
 
 ---
 
 ### Classes Page
 
-> *Insert screenshot here.*
+![Classes](images/classes.png)
 
 ---
 
 ### Memberships Page
 
-> *Insert screenshot here.*
+![Membership](images/membershipPage.png)
 
 ---
 
 ### Contact Page
 
-> *Insert screenshot here.*
+![Contact](images/contact.png)
 
 ---
 
 ## Summary
 
 The WordPress website was successfully customised to provide a clean and user-friendly interface for the fictional business. The final website includes multiple pages, consistent navigation, and integration with the MediaWiki staff knowledge base.
+
+---
+
+## Next
+
+With the WordPress website completed, the next stage of the project is to deploy and configure [06 - MediaWiki](06-MediaWiki.md) as an internal staff knowledge base. This will provide a central location for storing documentation, procedures, and operational resources while integrating with the existing website.
