@@ -2,7 +2,7 @@
 
 ## Step 1 — Get a Cloud VM
 
-I used an Ubuntu 24.04 LTS virtual machine built in Microsoft Azure using the Standard B1S size.
+An Ubuntu 24.04 LTS virtual machine was built in Microsoft Azure using the Standard B1S size.
 
   You can also use: AWS or DigitalOcean
 
