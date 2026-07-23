@@ -48,6 +48,7 @@ Once completed, the script confirms that the backup has been successfully create
 
 ### Screenshot 3 – Backup Files Created
 
+
 ![Backup Files Created](images/backup-files-created.png)
 
 ---
