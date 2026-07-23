@@ -130,6 +130,6 @@ This deployment provides the public-facing website for Elevate Fitness Studio an
 
 ## Next Step
 
-After the public website was successfully deployed, MediaWiki was installed as a knowledge base on the same server.
+After WordPress was successfully installed, the Elevate Fitness Studio website was designed and customised using WordPress.
 
-Continue to: [MediaWiki Installation](05-MediaWiki.md)
+Continue to: [WordPress Website Development](05-WordPress-Website-Development.md)
