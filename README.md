@@ -60,7 +60,7 @@ The Azure virtual machine hosts several services:
 - [01 – Server Setup](01-Server-Setup.md)
 - [02 – DNS Configuration](02-DNS-Configuration.md)
 - [03 – SSL Configuration](03-SSL-Configuration.md)
-- [04 – WordPress Installation](04-WordPress-Installation.md)
+- [04 – WordPress Installation](04-WordPress.md)
 - [05 – WordPress Website Development](05-WordPress-Website-Development.md)
 - [06 – MediaWiki Installation](06-MediaWiki.md)
 - [07 – WireGuard VPN Configuration](07-WireGuard.md)
