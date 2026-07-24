@@ -83,7 +83,7 @@ mehekx.com
 
 The record therefore directs requests for `mehekx.com` to the Azure VM at `20.46.48.69`.
 
-![DNS1 – Domain A Record Configured](images/DNS1%20%E2%80%93%20Domain%20A%20Record%20Configured.png)
+![Domain A Record Configured](images/DNS1–DomainARecordConfigured.png)
 
 ---
 
@@ -111,7 +111,7 @@ The command returned:
 
 This confirmed that the domain was resolving to the Azure VM's public IP address.
 
-![DNS2 – Domain Resolving to Azure Public IP](images/DNS2%20%E2%80%93%20Domain%20Resolving%20to%20Azure%20Public%20IP.png)
+![Domain Resolving to Azure Public IP](images/DNS2–DomainResolvingtoAzurePublicIP.png)
 
 The domain can also be checked on Windows, Linux or macOS using:
 
