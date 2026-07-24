@@ -65,6 +65,7 @@ The Azure virtual machine hosts several services:
 - [06 – MediaWiki Installation](06-MediaWiki.md)
 - [07 – WireGuard VPN Configuration](07-WireGuard.md)
 - [08 – Backup Script](08-Backup-Script.md)
+- [09 - Website Licence](09-Website-Licence.md)
 
 
 ## Repository Structure
@@ -81,6 +82,7 @@ ICT171-Cloud-Server-Project/
 ├── 06-MediaWiki.md
 ├── 07-WireGuard.md
 ├── 08-Backup-Script.md
+├── 09 - Website Licence
 │
 └── images/
     ├── Server setup screenshots
