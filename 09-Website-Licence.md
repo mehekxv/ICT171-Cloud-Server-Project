@@ -26,4 +26,7 @@ The website has been released under the **Creative Commons Attribution-NonCommer
 
 Elevate Fitness Studio Website  © 2026 by Mehek Ashraf is licensed under CC BY-NC 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/
 
+## Navigation
+
+⬅️ **Previous:** [08 - Backup Script](08-Backup-Script.md)
 
